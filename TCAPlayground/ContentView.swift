@@ -5,22 +5,48 @@
 //  Created by Nazar Prysiazhnyi on 26.08.2023.
 //
 
+import ComposableArchitecture
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+  let store: StoreOf<CounterFeature>
+
+  var body: some View {
+    WithViewStore(self.store, observe: { $0 }) { viewStore in
+      VStack {
+        Text("\(viewStore.count)")
+          .font(.largeTitle)
+          .padding()
+          .background(Color.black.opacity(0.1))
+          .cornerRadius(10)
+        HStack {
+          Button("-") {
+            viewStore.send(.decrementButtonTapped)
+          }
+          .font(.largeTitle)
+          .padding()
+          .background(Color.black.opacity(0.1))
+          .cornerRadius(10)
+
+          Button("+") {
+            viewStore.send(.incrementButtonTapped)
+          }
+          .font(.largeTitle)
+          .padding()
+          .background(Color.black.opacity(0.1))
+          .cornerRadius(10)
         }
-        .padding()
+      }
     }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(
+            store: Store(initialState: CounterFeature.State()) {
+                CounterFeature()
+            }
+        )
     }
 }

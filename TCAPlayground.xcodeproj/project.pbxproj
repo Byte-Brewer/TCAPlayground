@@ -15,6 +15,7 @@
 		78533F2F2A9A865900EA2D91 /* TCAPlaygroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78533F2E2A9A865900EA2D91 /* TCAPlaygroundUITests.swift */; };
 		78533F312A9A865900EA2D91 /* TCAPlaygroundUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78533F302A9A865900EA2D91 /* TCAPlaygroundUITestsLaunchTests.swift */; };
 		789171AA2A9A9AB4006962BB /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 789171A92A9A9AB4006962BB /* ComposableArchitecture */; };
+		789171AC2A9A9BBF006962BB /* CounterFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789171AB2A9A9BBF006962BB /* CounterFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		78533F2A2A9A865900EA2D91 /* TCAPlaygroundUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCAPlaygroundUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78533F2E2A9A865900EA2D91 /* TCAPlaygroundUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAPlaygroundUITests.swift; sourceTree = "<group>"; };
 		78533F302A9A865900EA2D91 /* TCAPlaygroundUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCAPlaygroundUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		789171AB2A9A9BBF006962BB /* CounterFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			children = (
 				78533F132A9A865800EA2D91 /* TCAPlaygroundApp.swift */,
 				78533F152A9A865800EA2D91 /* ContentView.swift */,
+				789171AB2A9A9BBF006962BB /* CounterFeature.swift */,
 				78533F172A9A865900EA2D91 /* Assets.xcassets */,
 				78533F192A9A865900EA2D91 /* Preview Content */,
 			);
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789171AC2A9A9BBF006962BB /* CounterFeature.swift in Sources */,
 				78533F162A9A865800EA2D91 /* ContentView.swift in Sources */,
 				78533F142A9A865800EA2D91 /* TCAPlaygroundApp.swift in Sources */,
 			);
